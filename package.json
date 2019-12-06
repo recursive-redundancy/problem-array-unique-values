@@ -1,0 +1,19 @@
+{
+  "name": "unique-values-array",
+  "version": "1.0.0",
+  "description": "Practice Problem - Given an array, return the number (the count) of unique values.",
+  "main": "unique-values.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/recursive-redundancy/problem-array-unique-values.git"
+  },
+  "author": "Daniel Morgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/recursive-redundancy/problem-array-unique-values/issues"
+  },
+  "homepage": "https://github.com/recursive-redundancy/problem-array-unique-values#readme"
+}
