@@ -2,7 +2,7 @@
  * Unit testing script
  */
 
-const { unqVals_Set } = require('./unique-values');
+const { unqVals_Set, unqVals_Map } = require('./unique-values');
 
 /**
  * set of arrays to test
@@ -25,6 +25,8 @@ let tests = [
 /** run solnLinearTime on each test array */
 tests.forEach((test) => {
   console.log('running test on: ' + test.arr);
+
+  console.log('SET METHOD:');
   let result = unqVals_Set(test.arr);
   console.log('expected=' + test.soln);
   console.log('result=' + result);
@@ -34,5 +36,17 @@ tests.forEach((test) => {
   else {
     console.log('***FAILURE***');
   }
+
+  console.log('MAP METHOD:');
+  result = unqVals_Map(test.arr);
+  console.log('expected=' + test.soln);
+  console.log('result=' + result);
+  if (test.soln == result) {
+    console.log('***SUCCESS***');
+  }
+  else {
+    console.log('***FAILURE***');
+  }
+
   console.log('-----------------')
 })
