@@ -23,6 +23,14 @@ This method takes advantage of the JavaScript ES6 built-in Set object. The Set o
 Therefore this method is O(n) linear time.
 
 ## Solution 2
+This method utilizes JavaScript's built-in Map Object to build a Hash Map of every unique value found in the array. We iterate each element in the array, and use the Map.prototype.set to add the element to the Map. Since the set method will update the item if it already exists, the resulting Map will contain only unique values. After we have traversed the entire array, we use the Map.prototype.size property to determine how many unique values there are.
+
+### Time Complexity
+* The Map.size property is O(1) constant time.
+* The Map.set operation is O(logn) logarithmic time.
+* Traversing the array takes O(n) linear time.
+
+Therefore this method is O(nlogn) log-linear time.
 
 # Testing
 A test.js script is included for unit testing. Test is run on a set of different arrays - one of the array tests being an empty array (returns 0). Test is run by 'npm test' command.
